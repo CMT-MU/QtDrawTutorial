@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="jp" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to sparse-ir tutorial &#8212; sparse-ir</title>
+    <title>Welcome to QtDraw tutorial &#8212; QtDraw</title>
   
   
   
@@ -41,7 +41,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/documentation_options.js?v=3adc9a13"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -68,9 +68,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Intermediate representation (IR)" href="src/IR_py.html" />
+    <link rel="next" title="Intermediate representation (IR)" href="src/sample_py.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="jp"/>
   </head>
   
   
@@ -155,7 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">sparse-ir</p>
+    <p class="title logo__title">QtDraw</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -175,13 +175,13 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome to sparse-ir tutorial
+                    Welcome to QtDraw tutorial
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Basic theory</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="src/IR_py.html">Intermediate representation (IR)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src/sample_py.html">Intermediate representation (IR)</a></li>
 </ul>
 
     </div>
@@ -320,7 +320,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to sparse-ir tutorial</h1>
+    <h1>Welcome to QtDraw tutorial</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -342,30 +342,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-sparse-ir-tutorial">
-<h1>Welcome to sparse-ir tutorial<a class="headerlink" href="#welcome-to-sparse-ir-tutorial" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-qtdraw-tutorial">
+<h1>Welcome to QtDraw tutorial<a class="headerlink" href="#welcome-to-qtdraw-tutorial" title="Link to this heading">#</a></h1>
 <p>This online document provides comprehensive tutorials of the Python library <a class="reference external" href="https://github.com/SpM-lab/sparse-ir">sparse-ir</a> library as well as its port to <a class="reference external" href="https://github.com/SpM-lab/SparseIR.jl">Julia</a> and <a class="reference external" href="https://github.com/SpM-lab/sparse-ir-fortran">Fortran</a>.</p>
 <p>You can run jupyter notebooks online on <a class="reference external" href="https://mybinder.org/v2/gh/SpM-lab/sparse-ir-binder/HEAD">mybinder</a>!</p>
 <p>Please free to make a contact with the authors of each tutorial page if you have any questions!</p>
 <section id="contributors">
 <h2>Contributors<a class="headerlink" href="#contributors" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Markus Wallerberger (TU Wien)</p></li>
-<li><p>Samuel Badr (TU Wien)</p></li>
-<li><p>Shintaro Hoshino (Saitama Univ.)</p></li>
-<li><p>Fumiya Kakizawa (Saitama Univ.)</p></li>
-<li><p>Takashi Koretsune (Tohoku Univ.)</p></li>
-<li><p>Yuki Nagai (JAEA, Riken)</p></li>
-<li><p>Kosuke Nogaki (Kyoto Univ.)</p></li>
-<li><p>Takuya Nomoto (Univ. Tokyo)</p></li>
-<li><p>Hitoshi Mori (Riken)</p></li>
-<li><p>Junya Otsuki (Okayama Univ.)</p></li>
-<li><p>Soshun Ozaki (Univ. Tokyo)</p></li>
-<li><p>Rihito Sakurai (Saitama Univ.)</p></li>
-<li><p>Constanze Vogel (TU Wien)</p></li>
-<li><p>Niklas Witt (Univ. Hamburg)</p></li>
-<li><p>Kazuyoshi Yoshimi (ISSP)</p></li>
-<li><p>Hiroshi Shinaoka (Saitama Univ.)</p></li>
+<li><p>Hiroaki Kusunose (Meiji University)</p></li>
 </ul>
 </section>
 <div class="toctree-wrapper compound">
@@ -403,7 +388,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="src/IR_py.html"
+       href="src/sample_py.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
@@ -442,7 +427,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By sparse-ir developers
+By QtDraw developers
 </p>
 
   </div>
@@ -452,7 +437,7 @@ By sparse-ir developers
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2020.
       <br/>
     
   </p>
