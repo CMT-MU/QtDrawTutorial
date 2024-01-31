@@ -1,12 +1,12 @@
 #######################################################################################
 # Book settings
-title : sparse-ir
-author: sparse-ir developers
-copyright: "2022"
+title : QtDraw
+author: QtDraw developers
+copyright: "2021-"
 
 # Information about where the book exists on the web
 description: >-
-  Online document for sparse-ir
+  Online document for QtDraw
 
 #######################################################################################
 # Execution settings
@@ -16,9 +16,9 @@ execute:
 
 #######################################################################################
 # HTML-specific settings
-html:
-  home_page_in_navbar         : false
-  google_analytics_id: G-RD8N0K0C9Y
+#html:
+#  home_page_in_navbar         : false
+#  google_analytics_id: G-RD8N0K0C9Y
 
 # #######################################################################################
 # Interact link settings
@@ -27,7 +27,7 @@ html:
 #######################################################################################
 # Launch button settings
 #repository:
-  #url                         : https://github.com/SpM-lab/sparse-ir-tutorial.git
+  #url                         : https://github.com/CMT-MU/QtDrawTutorial.git
   #branch                      : main
   #notebook_interface          : jupyterlab
 #
@@ -48,13 +48,13 @@ bibtex_bibfiles:
 sphinx:
   config:
     bibtex_reference_style: author_year
-    language: en
+    language: jp
 
 parse:
   myst_substitutions:
       sub3: My _global_ value!
   myst_url_schemes: [mailto, http, https]
- 
+
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
     - amsmath
     - colon_fence
