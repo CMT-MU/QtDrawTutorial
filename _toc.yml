@@ -7,11 +7,11 @@ parts:
         file: src/atomic_multipole.md
         sections:
           - title: 結晶場
-            file: src/cef/cef_1.md
+            file: src/atomic_multipole/cef/cef_1.md
           - title: 多極子の行列要素
-            file: src/atomic_multipole/atomic_multipole.md
+            file: src/atomic_multipole/atomic_multipole/atomic_multipole.md
       - title: サンプル
         file: src/sample.md
         sections:
           - title: サンプル
-            file: src/sample_py.md
+            file: src/untitled/sample_py.md
