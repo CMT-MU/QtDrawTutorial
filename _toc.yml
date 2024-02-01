@@ -10,3 +10,8 @@ parts:
             file: src/cef/cef_1.md
           - title: 多極子の行列要素
             file: src/atomic_multipole/atomic_multipole.md
+      - title: サンプル
+        file: src/sample.md
+        sections:
+          - title: サンプル
+            file: src/sample_py.md
