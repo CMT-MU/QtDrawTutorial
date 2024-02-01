@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="jp" data-content_root="../" >
+<html lang="jp" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>サンプル &#8212; QtDraw Tutorial</title>
+    <title>結晶場状態（スピン軌道相互作用なし） &#8212; QtDraw Tutorial</title>
   
   
   
@@ -18,47 +18,47 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../_static/documentation_options.js?v=3adc9a13"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/documentation_options.js?v=3adc9a13"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -67,11 +67,10 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'src/sample_py';</script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="結晶場状態（スピン軌道相互作用なし）" href="cef/cef_1.html" />
-    <link rel="prev" title="QtDrawチュートリアルへようこそ" href="../index.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'src/cef/cef_1';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="サンプル" href="../sample_py.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="jp"/>
   </head>
@@ -107,7 +106,7 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="../search.html"
+      action="../../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -149,7 +148,7 @@ const thebe_selector_output = ".output, .cell_output"
 
   
 
-<a class="navbar-brand logo" href="../index.html">
+<a class="navbar-brand logo" href="../../index.html">
   
   
   
@@ -175,15 +174,15 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../index.html">
+                <a class="reference internal" href="../../index.html">
                     QtDrawチュートリアルへようこそ
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">最初</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">サンプル</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cef/cef_1.html">結晶場状態（スピン軌道相互作用なし）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_py.html">サンプル</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">結晶場状態（スピン軌道相互作用なし）</a></li>
 </ul>
 
     </div>
@@ -238,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/src/sample_py.ipynb" target="_blank"
+      <li><a href="../../_sources/src/cef/cef_1.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -248,7 +247,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -322,7 +321,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>サンプル</h1>
+    <h1>結晶場状態（スピン軌道相互作用なし）</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -332,8 +331,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">一体のグリーン関数</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-expansion-and-basis-functions">Singular value expansion and basis functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-4h-p">例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hd">例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hj-4">例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項</a></li>
 </ul>
             </nav>
         </div>
@@ -346,32 +346,42 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>サンプル<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<section id="id2">
-<h2>一体のグリーン関数<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<p>We introduce a Green’s function with imaginary arguments in time and frequency.
-This has no physical meaning but a mere mathematical trick to make calculations easier (to give another example of this: in Minkowski spacetime we take advantage of a similiar substitution).</p>
-<p>The so-called imaginary-frequency (Matsubara) Green’s functions are defined as follows:</p>
-<div class="math notranslate nohighlight">
-\[
-G_{ij}(\tau-\tau') = -\langle T_\tau [c_i(\tau){c}^\dagger_j(\tau')]\rangle,
-\]</div>
+<h1>結晶場状態（スピン軌道相互作用なし）<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>球対称性を持つ原子波動関数は<span class="math notranslate nohighlight">\((2l+1)\)</span>重に縮退している（<span class="math notranslate nohighlight">\(l\)</span>は角運動量）が、結晶中では対称性が低下してその縮退が解ける。
+この分裂したエネルギー準位（結晶場状態）は点群の既約表現によって分類できる。
+どのような既約表現で表されるか、具体例を見ながら確認する。</p>
+<section id="d-4h-p">
+<h2>例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子<a class="headerlink" href="#d-4h-p" title="Link to this heading">#</a></h2>
+<p>まずは、<span class="math notranslate nohighlight">\(p\)</span>軌道（角運動量<span class="math notranslate nohighlight">\(l=1\)</span>）が正方晶の結晶場中でどのように表現されるか確認する。</p>
+<p>QtDrawから「MultiPie」を起動する。
+表示されるウィンドウの上部のボタンを使う。</p>
+<p><img alt="MultiPie" src="../../_images/cef_multipie.png" /></p>
+<ul class="simple">
+<li><p>まずは点群を選ぶ。この例では、1「point group」、2「tetragonal」、3「D4h」の順に選択する</p></li>
+<li><p>電子の電荷分布を知りたいので、4「Q」を選択し、rankの部分に角運動量を入れる。いまはp軌道なので5「1」を選択。</p></li>
+<li><p>最後に6「harmonics」ボタンを押す。</p></li>
+</ul>
+<p>このようなウィンドウが表示される。</p>
+<p><img alt="MultiPie" src="../../_images/cef_p_table.png" /></p>
+<p>表の「irrep.」列を見ると、上から<span class="math notranslate nohighlight">\(A_{2u}\)</span>, <span class="math notranslate nohighlight">\(E_u\)</span>, <span class="math notranslate nohighlight">\(E_u\)</span>なので、3重縮退のp軌道は<span class="math notranslate nohighlight">\(A_{2u} + E_u\)</span>に分裂することがわかる。
+「expression」欄に対称性の表現が書かれており、<span class="math notranslate nohighlight">\(A_{2u}\)</span>は<span class="math notranslate nohighlight">\(z\)</span>、<span class="math notranslate nohighlight">\(E_u\)</span>は<span class="math notranslate nohighlight">\(\{x, y\}\)</span>である。つまり、<span class="math notranslate nohighlight">\(p_z\)</span>軌道と<span class="math notranslate nohighlight">\(\{p_x, p_y\}\)</span>軌道に分裂することを意味する。</p>
+<p>メインウィンドウには既約表現の軌道の図が表示される。</p>
+<p><img alt="MultiPie" src="../../_images/cef_p_orbital.png" /></p>
+<p>角軌道の番号は、表の再左列の番号と対応している。この番号は初めは表示されていないが、「list」ボタン→「orbital」タブ→「ON」にチェックを入れることで表示される。</p>
 </section>
-<section id="singular-value-expansion-and-basis-functions">
-<h2>Singular value expansion and basis functions<a class="headerlink" href="#singular-value-expansion-and-basis-functions" title="Link to this heading">#</a></h2>
-<p>The singular value expnasion of the kernel reads <span id="id3">[]</span></p>
-<div class="math notranslate nohighlight">
-\[
-K^\mathrm{L}(\tau, \omega) = \sum_{l=0}^\infty U_l(\tau) S_l V_l(\omega),
-\]</div>
-<p>for <span class="math notranslate nohighlight">\(\omega \in [-\wmax, \wmax]\)</span> with <span class="math notranslate nohighlight">\(\wmax\)</span> (&gt;0) being a cut-off frequency.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
+<section id="o-hd">
+<h2>例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子<a class="headerlink" href="#o-hd" title="Link to this heading">#</a></h2>
+<p>例として、d電子（角運動量2）の5重縮退が立方対称を持つ結晶場により、2重縮退の<span class="math notranslate nohighlight">\(e_g\)</span>軌道と3重縮退の<span class="math notranslate nohighlight">\(t_{2g}\)</span>軌道に分裂することを確認する。</p>
+</section>
+<section id="o-hj-4">
+<h2>例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項<a class="headerlink" href="#o-hj-4" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(4f^2\)</span>電子配置では、フント則により全スピン<span class="math notranslate nohighlight">\(S=1\)</span>、全軌道角運動量<span class="math notranslate nohighlight">\(L=5\)</span>、全角運動量<span class="math notranslate nohighlight">\(J=4\)</span>の9重縮退状態が安定となる。この縮退が結晶場により分裂する仕方を調べる。</p>
+<p><strong>注意</strong>
+対称性の議論だけからだと波動関数を決めることはできない。波動関数を決めるには、<span class="math notranslate nohighlight">\(A_{1g}\)</span>対称性に属する多極子演算子の線形結合によってハミルトニアンを作り、それを対角化すればよい。これにはMultiPieライブラリを使う必要がある。</p>
+<p>演習問題</p>
+<ul class="simple">
+<li></li>
+</ul>
 </section>
 </section>
 
@@ -388,7 +398,7 @@ K^\mathrm{L}(\tau, \omega) = \sum_{l=0}^\infty U_l(\tau) S_l V_l(\omega),
         },
         kernelOptions: {
             name: "python3",
-            path: "./src"
+            path: "./src/cef"
         },
         predefinedOutput: true
     }
@@ -406,22 +416,13 @@ K^\mathrm{L}(\tau, \omega) = \sum_{l=0}^\infty U_l(\tau) S_l V_l(\omega),
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="../sample_py.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">QtDrawチュートリアルへようこそ</p>
+        <p class="prev-next-title">サンプル</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="cef/cef_1.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">結晶場状態（スピン軌道相互作用なし）</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -439,8 +440,9 @@ K^\mathrm{L}(\tau, \omega) = \sum_{l=0}^\infty U_l(\tau) S_l V_l(\omega),
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">一体のグリーン関数</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#singular-value-expansion-and-basis-functions">Singular value expansion and basis functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-4h-p">例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hd">例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hj-4">例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項</a></li>
 </ul>
   </nav></div>
 
@@ -489,8 +491,8 @@ By QtDraw developers
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
