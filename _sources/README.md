@@ -1,28 +1,24 @@
-# QtDraw
+# QtDraw チュートリアル
 
-## Author guideline
+## 執筆ガイドライン
 
-* In Markdown cells, use the `$$`, `$$ $$` environments for equations.
-* References are listed in the markdown cell at the bottom of each notebook.
-* Remove all outputs in a jupyter notebook.
+* Markdownのセルで、数式の記述には`$$`, `$$ $$` 環境を用いる。
+* 文献は、ノートブックの末尾のmarkdownセルに、リストで掲載。
+* 文献は`references.bib`に追加可。
+* Jupyter notebookの全ての出力は除く。
 
-## Set up tools
+## GitHub Pagesの環境設定
 
 ```bash
 pip3 install jupyter-book ghp-import jupytext
 ```
-
-## Build and Upload html files (@ local main branch)
-
+## 記事の更新　(ローカルのmainブランチで)
+- src内に記事ファイルを作成。
+- _toc.ymlを適切に更新。
+- GitHubの更新 (gh-pagesへcommit, push)
 ```bash
 make upload
 ```
 
-
-
-## References
-You can add references to `references.bib`.
-
-## Trouble shooting
-
+## トラブル・シューティング
 * https://github.com/executablebooks/jupyter-book/issues/1541

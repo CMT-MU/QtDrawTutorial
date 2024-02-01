@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>QtDraw &#8212; QtDraw Tutorial</title>
+    <title>QtDraw チュートリアル &#8212; QtDraw Tutorial</title>
   
   
   
@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -174,15 +174,15 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="index.html">
-                    QtDrawチュートリアルへようこそ
+                    QtDraw チュートリアル
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">最初</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目次</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="src/sample_py.html">サンプル</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src/cef/cef_1.html">結晶場状態（スピン軌道相互作用なし）</a></li>
 <li class="toctree-l1"><a class="reference internal" href="src/atomic_multipole/atomic_multipole.html">原子軌道の多極子</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src/sample_py.html">サンプル</a></li>
 </ul>
 
     </div>
@@ -321,7 +321,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>QtDraw</h1>
+    <h1>QtDraw チュートリアル</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -331,11 +331,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-guideline">Author guideline</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-tools">Set up tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-upload-html-files-local-main-branch">Build and Upload html files (@ local main branch)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trouble-shooting">Trouble shooting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">執筆ガイドライン</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages">GitHub Pagesの環境設定</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main">記事の更新　(ローカルのmainブランチで)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">トラブル・シューティング</a></li>
 </ul>
             </nav>
         </div>
@@ -348,33 +347,35 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="qtdraw">
-<h1>QtDraw<a class="headerlink" href="#qtdraw" title="Link to this heading">#</a></h1>
-<section id="author-guideline">
-<h2>Author guideline<a class="headerlink" href="#author-guideline" title="Link to this heading">#</a></h2>
+<h1>QtDraw チュートリアル<a class="headerlink" href="#qtdraw" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>執筆ガイドライン<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>In Markdown cells, use the <code class="docutils literal notranslate"><span class="pre">$$</span></code>, <code class="docutils literal notranslate"><span class="pre">$$</span> <span class="pre">$$</span></code> environments for equations.</p></li>
-<li><p>References are listed in the markdown cell at the bottom of each notebook.</p></li>
-<li><p>Remove all outputs in a jupyter notebook.</p></li>
+<li><p>Markdownのセルで、数式の記述には<code class="docutils literal notranslate"><span class="pre">$$</span></code>, <code class="docutils literal notranslate"><span class="pre">$$</span> <span class="pre">$$</span></code> 環境を用いる。</p></li>
+<li><p>文献は、ノートブックの末尾のmarkdownセルに、リストで掲載。</p></li>
+<li><p>文献は<code class="docutils literal notranslate"><span class="pre">references.bib</span></code>に追加可。</p></li>
+<li><p>Jupyter notebookの全ての出力は除く。</p></li>
 </ul>
 </section>
-<section id="set-up-tools">
-<h2>Set up tools<a class="headerlink" href="#set-up-tools" title="Link to this heading">#</a></h2>
+<section id="github-pages">
+<h2>GitHub Pagesの環境設定<a class="headerlink" href="#github-pages" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>jupyter-book<span class="w"> </span>ghp-import<span class="w"> </span>jupytext
 </pre></div>
 </div>
 </section>
-<section id="build-and-upload-html-files-local-main-branch">
-<h2>Build and Upload html files (&#64; local main branch)<a class="headerlink" href="#build-and-upload-html-files-local-main-branch" title="Link to this heading">#</a></h2>
+<section id="main">
+<h2>記事の更新　(ローカルのmainブランチで)<a class="headerlink" href="#main" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>src内に記事ファイルを作成。</p></li>
+<li><p>_toc.ymlを適切に更新。</p></li>
+<li><p>GitHubの更新 (gh-pagesへcommit, push)</p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>upload
 </pre></div>
 </div>
 </section>
-<section id="references">
-<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<p>You can add references to <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>.</p>
-</section>
-<section id="trouble-shooting">
-<h2>Trouble shooting<a class="headerlink" href="#trouble-shooting" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h2>トラブル・シューティング<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="github reference external" href="https://github.com/executablebooks/jupyter-book/issues/1541">executablebooks/jupyter-book#1541</a></p></li>
 </ul>
@@ -427,11 +428,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-guideline">Author guideline</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-tools">Set up tools</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build-and-upload-html-files-local-main-branch">Build and Upload html files (@ local main branch)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trouble-shooting">Trouble shooting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">執筆ガイドライン</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-pages">GitHub Pagesの環境設定</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#main">記事の更新　(ローカルのmainブランチで)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">トラブル・シューティング</a></li>
 </ul>
   </nav></div>
 
