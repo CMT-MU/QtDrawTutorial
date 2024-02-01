@@ -20,5 +20,5 @@ pip3 install jupyter-book ghp-import jupytext
 make upload
 ```
 
-## Trouble shooting
+## トラブル・シューティング
 * https://github.com/executablebooks/jupyter-book/issues/1541
