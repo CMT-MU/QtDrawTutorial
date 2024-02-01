@@ -5,3 +5,4 @@ parts:
   chapters:
   - file: src/sample_py
   - file: src/cef/cef_1
+  - file: src/atomic_multipole/atomic_multipole
