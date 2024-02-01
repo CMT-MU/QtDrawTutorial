@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Atomic多極子関連 &#8212; QtDraw Tutorial</title>
+    <title>結晶場状態（スピン軌道相互作用なし） &#8212; QtDraw Tutorial</title>
   
   
   
@@ -65,10 +65,12 @@ const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'src/sample';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'src/cef_1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="原子軌道の多極子" href="atomic_multipole/atomic_multipole.html" />
+    <link rel="prev" title="サンプル" href="sample_py.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="jp"/>
   </head>
@@ -173,20 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../index.html">
-                    QtDraw チュートリアル
+                    QtDrawチュートリアルへようこそ
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">目次</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">最初</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="atomic_multipole.html">Atomic多極子関連</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="cef/cef_1.html">結晶場</a></li>
-<li class="toctree-l2"><a class="reference internal" href="atomic_multipole/atomic_multipole.html">多極子の行列要素</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">サンプル</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="sample_py.html">サンプル</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">結晶場状態（スピン軌道相互作用なし）</a></li>
 </ul>
 
     </div>
@@ -241,7 +237,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/src/sample.md" target="_blank"
+      <li><a href="../_sources/src/cef_1.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +308,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -323,11 +321,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Atomic多極子関連</h1>
+    <h1>結晶場状態（スピン軌道相互作用なし）</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-4h-p">例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hd">例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hj-4">例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -337,10 +345,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="atomic">
-<h1>Atomic多極子関連<a class="headerlink" href="#atomic" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>結晶場状態（スピン軌道相互作用なし）<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>球対称性を持つ原子波動関数は<span class="math notranslate nohighlight">\((2l+1)\)</span>重に縮退（<span class="math notranslate nohighlight">\(l\)</span>は角運動量）しているが、結晶中では対称性が低下して縮退が解ける。
+この分裂したエネルギー準位（結晶場状態）は点群の既約表現によって分類できる。
+この分裂の仕方を</p>
+<section id="d-4h-p">
+<h2>例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子<a class="headerlink" href="#d-4h-p" title="Link to this heading">#</a></h2>
+</section>
+<section id="o-hd">
+<h2>例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子<a class="headerlink" href="#o-hd" title="Link to this heading">#</a></h2>
+<p>例として、d電子（角運動量2）の5重縮退が立方対称を持つ結晶場により、2重縮退の<span class="math notranslate nohighlight">\(e_g\)</span>軌道と3重縮退の<span class="math notranslate nohighlight">\(t_{2g}\)</span>軌道に分裂することを確認する。</p>
+</section>
+<section id="o-hj-4">
+<h2>例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項<a class="headerlink" href="#o-hj-4" title="Link to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(4f^2\)</span>電子配置では、フント則により全スピン<span class="math notranslate nohighlight">\(S=1\)</span>、全軌道角運動量<span class="math notranslate nohighlight">\(L=5\)</span>、全角運動量<span class="math notranslate nohighlight">\(J=4\)</span>の9重縮退状態が安定となる。この縮退が結晶場により分裂する仕方を調べる。</p>
+<p><strong>注意</strong>
+対称性の議論だけからだと波動関数を決めることはできない。波動関数を決めるには、<span class="math notranslate nohighlight">\(A_{1g}\)</span>対称性に属する多極子演算子の線形結合によってハミルトニアンを作り、それを対角化すればよい。これにはMultiPieライブラリを使う必要がある。</p>
+<p>演習問題</p>
+<ul class="simple">
+<li></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -374,12 +400,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="atomic_multipole/atomic_multipole.html"
+       href="sample_py.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">原子軌道の多極子</p>
+        <p class="prev-next-title">サンプル</p>
       </div>
     </a>
 </div>
@@ -389,7 +415,22 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-4h-p">例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hd">例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hj-4">例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
