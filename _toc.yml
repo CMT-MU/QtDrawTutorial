@@ -6,7 +6,7 @@ parts:
       - title: Atomic多極子関連
         file: src/atomic_multipole.md
         sections:
-          - title: 結晶場
+          - title: 結晶場状態
             file: src/atomic_multipole/cef/cef_1.md
           - title: 活性な多極子(と行列要素)
             file: src/atomic_multipole/atomic_multipole/atomic_multipole.md
