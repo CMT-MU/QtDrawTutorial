@@ -1,8 +1,8 @@
 format: jb-book
 root: index
 parts:
-- caption: 最初
+- caption: 目次
   chapters:
-  - file: src/sample_py
   - file: src/cef/cef_1
   - file: src/atomic_multipole/atomic_multipole
+  - file: src/sample_py
