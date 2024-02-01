@@ -1,8 +1,17 @@
 format: jb-book
 root: index
 parts:
-- caption: 目次
-  chapters:
-  - file: src/cef/cef_1
-  - file: src/atomic_multipole/atomic_multipole
-  - file: src/sample_py
+  - caption: 目次
+    chapters:
+      - title: Atomic多極子関連
+        file: src/atomic_multipole.md
+        sections:
+          - title: 結晶場
+            file: src/cef/cef_1.md
+          - title: 多極子の行列要素
+            file: src/atomic_multipole/atomic_multipole.md
+      - title: サンプル
+        file: src/sample.md
+        sections:
+          - title: サンプル
+            file: src/sample_py.md
