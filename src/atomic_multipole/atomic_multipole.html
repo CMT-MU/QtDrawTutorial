@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>結晶場状態（スピン軌道相互作用なし） &#8212; QtDraw Tutorial</title>
+    <title>原子軌道の多極子 &#8212; QtDraw Tutorial</title>
   
   
   
@@ -67,11 +67,10 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'src/cef/cef_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'src/atomic_multipole/atomic_multipole';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="原子軌道の多極子" href="../atomic_multipole/atomic_multipole.html" />
-    <link rel="prev" title="サンプル" href="../sample_py.html" />
+    <link rel="prev" title="結晶場状態（スピン軌道相互作用なし）" href="../cef/cef_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="jp"/>
   </head>
@@ -183,8 +182,8 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">最初</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../sample_py.html">サンプル</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">結晶場状態（スピン軌道相互作用なし）</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../atomic_multipole/atomic_multipole.html">原子軌道の多極子</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cef/cef_1.html">結晶場状態（スピン軌道相互作用なし）</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">原子軌道の多極子</a></li>
 </ul>
 
     </div>
@@ -239,7 +238,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/src/cef/cef_1.md" target="_blank"
+      <li><a href="../../_sources/src/atomic_multipole/atomic_multipole.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +322,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>結晶場状態（スピン軌道相互作用なし）</h1>
+    <h1>原子軌道の多極子</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -333,10 +332,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-4h-p">例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hd">例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hj-4">例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">演習問題</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">空間反転あり</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-o-h">例1：p軌道（点群<span class="math notranslate nohighlight">\(O_h\)</span>）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yz-xz">例2：<span class="math notranslate nohighlight">\(\{ yz, xz \}\)</span>軌道</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-xy">例3：<span class="math notranslate nohighlight">\(\{ z, xy \}\)</span>軌道</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">空間反転なし</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">例1：<span class="math notranslate nohighlight">\(\{ z, xy \}\)</span>軌道</a></li>
 </ul>
 </li>
 </ul>
@@ -351,55 +354,49 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>結晶場状態（スピン軌道相互作用なし）<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<p>球対称性を持つ原子波動関数は<span class="math notranslate nohighlight">\((2l+1)\)</span>重に縮退している（<span class="math notranslate nohighlight">\(l\)</span>は角運動量）が、結晶中では対称性が低下してその縮退が解ける。
-この分裂したエネルギー準位（結晶場状態）は点群の既約表現によって分類できる。
-どのような既約表現で表されるか、具体例を見ながら確認する。</p>
-<section id="d-4h-p">
-<h2>例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子<a class="headerlink" href="#d-4h-p" title="Link to this heading">#</a></h2>
-<p>まずは、<span class="math notranslate nohighlight">\(p\)</span>軌道（角運動量<span class="math notranslate nohighlight">\(l=1\)</span>）が正方晶の結晶場中でどのように表現されるか確認する。</p>
+<h1>原子軌道の多極子<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>空間反転あり<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="p-o-h">
+<h3>例1：p軌道（点群<span class="math notranslate nohighlight">\(O_h\)</span>）<a class="headerlink" href="#p-o-h" title="Link to this heading">#</a></h3>
+<p>まずはp軌道が持つ多極子自由度を例にとり、手順を説明する。
+p軌道は<span class="math notranslate nohighlight">\(\{x, y, z\}\)</span>の対称性を持つ3つの軌道から成るので、多極子は全部で<span class="math notranslate nohighlight">\(3^2=9\)</span>個ある。</p>
 <p>QtDrawから「MultiPie」を起動する。
 表示されるウィンドウの上部のボタンを使う。</p>
-<p><img alt="MultiPie" src="../../_images/cef_multipie.png" /></p>
+<p><img alt="MultiPie" src="../../_images/multipole_multipie.png" /></p>
 <ul class="simple">
-<li><p>まずは点群を選ぶ。この例では、1「point group」、2「tetragonal」、3「D4h」の順に選択する</p></li>
-<li><p>電子の電荷分布を知りたいので、4「Q」を選択し、rankの部分に角運動量を入れる。いまはp軌道なので5「1」を選択。</p></li>
-<li><p>最後に6「harmonics」ボタンを押す。</p></li>
+<li><p>まずは点群を選ぶ。1「point group」、2「cubic」、3「Oh」の順に選択する</p></li>
+<li><p>多極子を表示するには「atomic multipole」の行を使う。4から、スピンを考慮しない場合は「lm」（角運動量が整数）を、スピンを考慮する場合には「jm」（全角運動量が半整数）を選ぶ。今回は「lm」を選択する。</p></li>
+<li><p>bra-ketの右の欄から軌道を選ぶ。今回はp軌道内の多極子自由度を知りたいので、5と6のどちらも「p」を選択する。</p></li>
+<li><p>表示したい多極子の種類をQ, G, T, Mの中から選ぶ（それぞれ、電気、電気トロイダル、磁気トロイダル、磁気を意味する）。ここでは、まず7「Q」を選ぶ。</p></li>
+<li><p>最後に8「atomic multipole」ボタンを押す。</p></li>
 </ul>
-<p>このようなウィンドウが表示される。</p>
-<p><img alt="MultiPie" src="../../_images/cef_p_table.png" /></p>
-<p>表の「irrep.」列を見ると、上から<span class="math notranslate nohighlight">\(A_{2u}\)</span>, <span class="math notranslate nohighlight">\(E_u\)</span>, <span class="math notranslate nohighlight">\(E_u\)</span>なので、3重縮退のp軌道は<span class="math notranslate nohighlight">\(A_{2u} \oplus E_u\)</span>に分裂することがわかる。
-「expression」欄に対称性の表現が書かれており、<span class="math notranslate nohighlight">\(A_{2u}\)</span>は<span class="math notranslate nohighlight">\(z\)</span>対称性、<span class="math notranslate nohighlight">\(E_u\)</span>は<span class="math notranslate nohighlight">\(\{x, y\}\)</span>である。つまり、<span class="math notranslate nohighlight">\(p_z\)</span>軌道と<span class="math notranslate nohighlight">\(\{p_x, p_y\}\)</span>軌道に分裂することを意味する。</p>
-<p>メインウィンドウには既約表現の軌道の図が描かれる。</p>
-<p><img alt="MultiPie" src="../../_images/cef_p_orbital.png" /></p>
-<p>各軌道の番号は、表の再左列の番号と対応している。この番号は、「list」ボタン→「orbital」タブ→「ON」にチェックを入れることで表示される（デフォルトはオフ）。</p>
+<p>新しいウィンドウに次の表が表示される。</p>
+<p><img alt="MultiPie" src="../../_images/multipole_Q.png" /></p>
+<p>電気多極子は<span class="math notranslate nohighlight">\(A_{1g}\)</span>, <span class="math notranslate nohighlight">\(E_{g}\)</span>, <span class="math notranslate nohighlight">\(T_{2g}\)</span>の3種類、6個あることがわかる。</p>
+<p>次に、7を「M」に変更して磁気多極子を表示させる。</p>
+<p><img alt="MultiPie" src="../../_images/multipole_M.png" /></p>
+<p><span class="math notranslate nohighlight">\(T_{1g}\)</span>の3個の多極子があることがわかる。</p>
+<p>これで9個全てそろったが、念のため、7を「G」や「T」にすると、次のような空の表が表示される。</p>
+<p><img alt="MultiPie" src="../../_images/multipole_M.png" /></p>
+<p>以上の結果をまとめると、p軌道内の多極子の分類は次の式で表される。</p>
+<div class="math notranslate nohighlight">
+\[
+T_{1u} \otimes T_{1u} = A_{1g}^{+} \oplus E_{g}^{+} \oplus T_{1g}^{-} \oplus T_{2g}^{+}
+\]</div>
+<p>ここで、<span class="math notranslate nohighlight">\(+\)</span>, <span class="math notranslate nohighlight">\(-\)</span>は時間反転対称性の偶・奇を表す。</p>
 </section>
-<section id="o-hd">
-<h2>例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子<a class="headerlink" href="#o-hd" title="Link to this heading">#</a></h2>
-<p>次の例として、d電子（角運動量2）の5重縮退が立方対称群<span class="math notranslate nohighlight">\(O_h\)</span>の結晶場により、2重縮退の<span class="math notranslate nohighlight">\(e_g\)</span>軌道と3重縮退の<span class="math notranslate nohighlight">\(t_{2g}\)</span>軌道に分裂することを確認する。
-手順は例1と同じなので、結果のみ示す。</p>
-<p><img alt="MultiPie" src="../../_images/cef_d_table.png" /></p>
-<p>番号1, 2がそれぞれ<span class="math notranslate nohighlight">\(3z^2-r^2\)</span>, <span class="math notranslate nohighlight">\(x^2-y^2\)</span>の対称性を持つ2重縮退の<span class="math notranslate nohighlight">\(e_g\)</span>軌道になっている（係数は規格化によって決まっている）。
-番号3～5は<span class="math notranslate nohighlight">\(yz\)</span>, <span class="math notranslate nohighlight">\(xz\)</span>, <span class="math notranslate nohighlight">\(xy\)</span>軌道で、3重縮退の<span class="math notranslate nohighlight">\(t_{2g}\)</span>軌道である。</p>
-<p><img alt="MultiPie" src="../../_images/cef_d_orbital.png" /></p>
-<p>量子力学の教科書でよく見る軌道が描かれている。</p>
-<p>なお、例1から続けて図示した場合には、p軌道の図も同時に表示されている。「list」→「orbital」から表示する軌道を選択するとよい。</p>
+<section id="yz-xz">
+<h3>例2：<span class="math notranslate nohighlight">\(\{ yz, xz \}\)</span>軌道<a class="headerlink" href="#yz-xz" title="Link to this heading">#</a></h3>
 </section>
-<section id="o-hj-4">
-<h2>例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項<a class="headerlink" href="#o-hj-4" title="Link to this heading">#</a></h2>
-<p>最後に少し複雑な例を紹介する。
-<span class="math notranslate nohighlight">\(4f^2\)</span>電子配置では、フント則により全スピン<span class="math notranslate nohighlight">\(S=1\)</span>、全軌道角運動量<span class="math notranslate nohighlight">\(L=5\)</span>、全角運動量<span class="math notranslate nohighlight">\(J=4\)</span>の9重縮退状態が安定となる。この縮退が結晶場によりどのように分裂するかを調べる。
-rankに「4」を入れる以外はこれまでの例と変わらないので、結果のみを示す。</p>
-<p><img alt="MultiPie" src="../../_images/cef_J4_table.png" /></p>
-<p><span class="math notranslate nohighlight">\(J=4\)</span>の9重縮退は、<span class="math notranslate nohighlight">\(A_{1g} \oplus E_{g} \oplus T_{1g} \oplus T_{2g}\)</span>のように、1重項、2重項、3重項、3重項に分裂することがわかる。
-ベーテ表記で表すと、<span class="math notranslate nohighlight">\(\Gamma_{1} \oplus \Gamma_{3} \oplus \Gamma_{4} \oplus \Gamma_{5}\)</span>である。</p>
-<p><strong>注意</strong>
-対称性の議論だけからだと波動関数を決めることはできない。波動関数を決めるには、<span class="math notranslate nohighlight">\(A_{1g}\)</span>対称性に属する多極子演算子の線形結合によってハミルトニアンを作り、それを対角化すればよい。これにはMultiPieライブラリを使う必要がある。</p>
-<section id="id2">
-<h3>演習問題<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>【何か教育的な例があれば。】</p></li>
-</ul>
+<section id="z-xy">
+<h3>例3：<span class="math notranslate nohighlight">\(\{ z, xy \}\)</span>軌道<a class="headerlink" href="#z-xy" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="id3">
+<h2>空間反転なし<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h3>例1：<span class="math notranslate nohighlight">\(\{ z, xy \}\)</span>軌道<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -417,7 +414,7 @@ rankに「4」を入れる以外はこれまでの例と変わらないので、
         },
         kernelOptions: {
             name: "python3",
-            path: "./src/cef"
+            path: "./src/atomic_multipole"
         },
         predefinedOutput: true
     }
@@ -435,22 +432,13 @@ rankに「4」を入れる以外はこれまでの例と変わらないので、
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../sample_py.html"
+       href="../cef/cef_1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">サンプル</p>
+        <p class="prev-next-title">結晶場状態（スピン軌道相互作用なし）</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../atomic_multipole/atomic_multipole.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">原子軌道の多極子</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -468,10 +456,14 @@ rankに「4」を入れる以外はこれまでの例と変わらないので、
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-4h-p">例1：点群<span class="math notranslate nohighlight">\(D_{4h}\)</span>の下でのp電子</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hd">例2：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下でのd電子</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#o-hj-4">例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">演習問題</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">空間反転あり</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-o-h">例1：p軌道（点群<span class="math notranslate nohighlight">\(O_h\)</span>）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yz-xz">例2：<span class="math notranslate nohighlight">\(\{ yz, xz \}\)</span>軌道</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-xy">例3：<span class="math notranslate nohighlight">\(\{ z, xy \}\)</span>軌道</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">空間反転なし</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">例1：<span class="math notranslate nohighlight">\(\{ z, xy \}\)</span>軌道</a></li>
 </ul>
 </li>
 </ul>
