@@ -382,7 +382,12 @@ document.write(`
 </section>
 <section id="o-hj-4">
 <h2>例3：点群<span class="math notranslate nohighlight">\(O_h\)</span>の下での<span class="math notranslate nohighlight">\(J=4\)</span>多重項<a class="headerlink" href="#o-hj-4" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(4f^2\)</span>電子配置では、フント則により全スピン<span class="math notranslate nohighlight">\(S=1\)</span>、全軌道角運動量<span class="math notranslate nohighlight">\(L=5\)</span>、全角運動量<span class="math notranslate nohighlight">\(J=4\)</span>の9重縮退状態が安定となる。この縮退が結晶場により分裂する仕方を調べる。</p>
+<p>最後に少し複雑な例を紹介する。
+<span class="math notranslate nohighlight">\(4f^2\)</span>電子配置では、フント則により全スピン<span class="math notranslate nohighlight">\(S=1\)</span>、全軌道角運動量<span class="math notranslate nohighlight">\(L=5\)</span>、全角運動量<span class="math notranslate nohighlight">\(J=4\)</span>の9重縮退状態が安定となる。この縮退が結晶場により分裂する仕方を調べる。
+rankに「4」を入れる以外は上の例と変わらないので、結果のみを示す。</p>
+<p><img alt="MultiPie" src="../../_images/cef_J4_table.png" /></p>
+<p><span class="math notranslate nohighlight">\(J=4\)</span>の9重縮退は、<span class="math notranslate nohighlight">\(A_{1g} \oplus E_{g} \oplus T_{1g} \oplus T_{2g}\)</span>のように、1重項、2重項、3重項、3重項に分裂することがわかる。
+ベーテ表記で表すと、<span class="math notranslate nohighlight">\(\Gamma_{1} \oplus \Gamma_{2} \oplus \Gamma_{4} \oplus \Gamma_{5}\)</span>である。</p>
 <p><strong>注意</strong>
 対称性の議論だけからだと波動関数を決めることはできない。波動関数を決めるには、<span class="math notranslate nohighlight">\(A_{1g}\)</span>対称性に属する多極子演算子の線形結合によってハミルトニアンを作り、それを対角化すればよい。これにはMultiPieライブラリを使う必要がある。</p>
 <p>演習問題</p>
