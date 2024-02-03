@@ -124,6 +124,8 @@ $$
 $E_g$表現内の多極子が知りたいが、既約表現の指定はできないので、bra-ketから「d」を選び、d軌道内の多極子をすべて表示する。
 別ウィンドウで次の結果が得られる。
 
+**参考** 結晶場基底の多極子は``MultiPie``で得ることができる: [結晶場基底の活性多極子](https://cmt-mu.github.io/MultiPieTutorial/src/mp_cef/Oh_G7_G8.html)
+
 ![PNG](./ex2_multipole_Q_1.png)
 ![PNG](./ex2_multipole_Q_2.png)
 
