@@ -10,8 +10,3 @@ parts:
             file: src/atomic_multipole/cef/cef_1.md
           - title: 活性な多極子(と行列要素)
             file: src/atomic_multipole/active_multipole/active_multipole.md
-      - title: サンプル
-        file: src/untitled.md
-        sections:
-          - title: サンプル
-            file: src/untitled/sample_py.md
