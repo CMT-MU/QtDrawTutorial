@@ -1,12 +1,9 @@
 format: jb-book
 root: index
 parts:
-  - caption: 目次
-    chapters:
-      - title: Atomic多極子関連
-        file: src/atomic_multipole.md
-        sections:
-          - title: 結晶場状態
-            file: src/atomic_multipole/cef/cef_1.md
-          - title: 活性な多極子(と行列要素)
-            file: src/atomic_multipole/active_multipole/active_multipole.md
+- caption: 目次
+  chapters:
+    - file: src/atomic_multipole.md
+      sections:
+        - file: src/atomic_multipole/cef/cef_1.md
+        - file: src/atomic_multipole/active_multipole/active_multipole.md
