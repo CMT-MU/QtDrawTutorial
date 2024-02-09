@@ -38,7 +38,7 @@ html:
   home_page_in_navbar: false
   use_edit_page_button: true
   use_repository_button: true
-  use_issues_button: true
+  use_issues_button: false
   collapse_navigation: true
 
 # ==================================================
@@ -55,7 +55,6 @@ bibtex_bibfiles:
 # Information about where the book exists on the web
 repository:
   url: https://github.com/CMT-MU/QtDraw.git
-  # path_to_book: docs
   branch: main
 
 # ==================================================
