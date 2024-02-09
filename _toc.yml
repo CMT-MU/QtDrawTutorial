@@ -1,9 +1,10 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
 format: jb-book
 root: index
 parts:
-- caption: 目次
+- caption: Atomic多極子関連
   chapters:
-    - file: src/atomic_multipole.md
-      sections:
-        - file: src/atomic_multipole/cef/cef_1.md
-        - file: src/atomic_multipole/active_multipole/active_multipole.md
+    - file: src/atomic_multipole/cef/cef_1
+    - file: src/atomic_multipole/active_multipole/active_multipole
